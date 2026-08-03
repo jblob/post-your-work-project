@@ -51,7 +51,7 @@ def time_stats(df):
     print('\nCalculating The Most Frequent Times of Travel...\n')
     start_time = time.time()
 
-    # display the most common month
+    # [Hier kommt später deine Logik für Monat, Tag, Stunde hin]
 
 
     # display the most common day of week
@@ -61,9 +61,7 @@ def time_stats(df):
 
     # some additional comment for committing
 
-
-    print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+    print(f"\nThis took {time.time() - start_time:.4f} seconds.")
 
 
 def station_stats(df):
@@ -73,17 +71,22 @@ def station_stats(df):
     start_time = time.time()
 
     # display most commonly used start station
-
+    most_common_start = df['Start Station'].mode()[0]
+    print(f"Most Commonly Used Start Station: {most_common_start}")
 
     # display most commonly used end station
-
+    most_common_end = df['End Station'].mode()[0]
+    print(f"Most Commonly Used End Station: {most_common_end}")
 
     # display most frequent combination of start station and end station trip
+    # Wir verketten die Spalten direkt als Strings
+    df['Trip Combination'] = df['Start Station'] + " to " + df['End Station']
+    most_common_trip = df['Trip Combination'].mode()[0]
+    print(f"Most Frequent Combination of Trip: {most_common_trip}")
 
-
-    print("\nThis took %s seconds." % (time.time() - start_time))
+    # Punkt 4: Hier direkt den F-String für die Zeitmessung eingebaut
+    print(f"\nThis took {time.time() - start_time:.4f} seconds.")
     print('-'*40)
-
 
 def trip_duration_stats(df):
     """Displays statistics on the total and average trip duration."""
@@ -91,15 +94,11 @@ def trip_duration_stats(df):
     print('\nCalculating Trip Duration...\n')
     start_time = time.time()
 
-    # display total travel time
+    # [Hier kommt später deine Logik für Summe und Mittelwert hin]
 
-
-    # display mean travel time
-
-
-    print("\nThis took %s seconds." % (time.time() - start_time))
+    # Modernisierter F-String:
+    print(f"\nThis took {time.time() - start_time:.4f} seconds.")
     print('-'*40)
-
 
 def user_stats(df):
     """Displays statistics on bikeshare users."""
@@ -107,18 +106,11 @@ def user_stats(df):
     print('\nCalculating User Stats...\n')
     start_time = time.time()
 
-    # Display counts of user types
+    # [Hier kommt später deine Logik für User Types, Gender, Birth Year hin]
 
-
-    # Display counts of gender
-
-
-    # Display earliest, most recent, and most common year of birth
-
-
-    print("\nThis took %s seconds." % (time.time() - start_time))
+    # Modernisierter F-String:
+    print(f"\nThis took {time.time() - start_time:.4f} seconds.")
     print('-'*40)
-
 
 def main():
     while True:
