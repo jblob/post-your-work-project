@@ -74,3 +74,5 @@ This project is open-source and available under the **MIT License**. Feel free t
     *   Forked template repository and set up remote tracking.
     *   Added `.gitignore` to prevent tracking of large CSV data files.
     *   Structured primary analysis functions (`time_stats`, `station_stats`, `trip_duration_stats`, `user_stats`).
+*   **v1.0.1 (2026-08-03):** 
+    *   improved comments
