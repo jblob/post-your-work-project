@@ -51,18 +51,11 @@ def time_stats(df):
     print('\nCalculating The Most Frequent Times of Travel...\n')
     start_time = time.time()
 
-    # display the most common month
+    # [Hier kommt später deine Logik für Monat, Tag, Stunde hin]
 
-
-    # display the most common day of week
-
-
-    # display the most common start hour
-
-
-    print("\nThis took %s seconds." % (time.time() - start_time))
+    # Modernisierter F-String:
+    print(f"\nThis took {time.time() - start_time:.4f} seconds.")
     print('-'*40)
-
 
 def station_stats(df):
     """Displays statistics on the most popular stations and trip."""
@@ -94,15 +87,11 @@ def trip_duration_stats(df):
     print('\nCalculating Trip Duration...\n')
     start_time = time.time()
 
-    # display total travel time
+    # [Hier kommt später deine Logik für Summe und Mittelwert hin]
 
-
-    # display mean travel time
-
-
-    print("\nThis took %s seconds." % (time.time() - start_time))
+    # Modernisierter F-String:
+    print(f"\nThis took {time.time() - start_time:.4f} seconds.")
     print('-'*40)
-
 
 def user_stats(df):
     """Displays statistics on bikeshare users."""
@@ -110,18 +99,11 @@ def user_stats(df):
     print('\nCalculating User Stats...\n')
     start_time = time.time()
 
-    # Display counts of user types
+    # [Hier kommt später deine Logik für User Types, Gender, Birth Year hin]
 
-
-    # Display counts of gender
-
-
-    # Display earliest, most recent, and most common year of birth
-
-
-    print("\nThis took %s seconds." % (time.time() - start_time))
+    # Modernisierter F-String:
+    print(f"\nThis took {time.time() - start_time:.4f} seconds.")
     print('-'*40)
-
 
 def main():
     while True:
