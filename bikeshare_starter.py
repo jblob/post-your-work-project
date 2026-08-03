@@ -59,6 +59,8 @@ def time_stats(df):
 
     # display the most common start hour
 
+    # some additional comment for committing
+
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
