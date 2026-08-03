@@ -71,17 +71,22 @@ def station_stats(df):
     start_time = time.time()
 
     # display most commonly used start station
-
+    most_common_start = df['Start Station'].mode()[0]
+    print(f"Most Commonly Used Start Station: {most_common_start}")
 
     # display most commonly used end station
-
+    most_common_end = df['End Station'].mode()[0]
+    print(f"Most Commonly Used End Station: {most_common_end}")
 
     # display most frequent combination of start station and end station trip
+    # Wir verketten die Spalten direkt als Strings
+    df['Trip Combination'] = df['Start Station'] + " to " + df['End Station']
+    most_common_trip = df['Trip Combination'].mode()[0]
+    print(f"Most Frequent Combination of Trip: {most_common_trip}")
 
-
-    print("\nThis took %s seconds." % (time.time() - start_time))
+    # Punkt 4: Hier direkt den F-String für die Zeitmessung eingebaut
+    print(f"\nThis took {time.time() - start_time:.4f} seconds.")
     print('-'*40)
-
 
 def trip_duration_stats(df):
     """Displays statistics on the total and average trip duration."""
